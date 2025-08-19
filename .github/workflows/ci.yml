@@ -1,0 +1,58 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths-ignore:
+      - '**.md'
+      - 'LICENSE'
+      - '.gitignore'
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - '**.md'
+      - 'LICENSE'
+      - '.gitignore'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  latex-compilation:
+    name: LaTeX Compilation Test
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        latex-engine: [pdflatex, xelatex]
+      fail-fast: false
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup LaTeX Environment
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          latexmk_use_xelatex: ${{ matrix.latex-engine == 'xelatex' }}
+          args: -pdf -interaction=nonstopmode
+
+      - name: Check PDF Generation
+        run: |
+          if [ -f "main.pdf" ]; then
+            echo "PDF generated successfully with ${{ matrix.latex-engine }}"
+            ls -lh main.pdf
+          else
+            echo "PDF generation failed with ${{ matrix.latex-engine }}"
+            exit 1
+          fi
+
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: pdf-${{ matrix.latex-engine }}
+          path: main.pdf
+          retention-days: 7

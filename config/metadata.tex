@@ -1,0 +1,66 @@
+% =====================================================
+% MÉTADONNÉES PERSONNALISABLES DU PROJET
+% Version corrigée avec \renewcommand
+% =====================================================
+
+% =====================================================
+% DÉFINITION DES VARIABLES AVEC \renewcommand
+% =====================================================
+
+% ÉTAPE 1: Informations de base du rapport
+\renewcommand{\reporttitle}{Tutorial: Professional Report Template Features}
+\renewcommand{\reportsubtitle}{Complete Guide to LaTeX Template Customization}
+\renewcommand{\reporttype}{TUTORIAL REPORT}
+
+% ÉTAPE 2: Informations de l'étudiant
+\renewcommand{\reportauthor}{John Doe Student}
+\renewcommand{\studentid}{ST2024001}
+\renewcommand{\program}{Computer Science Engineering}
+\renewcommand{\academicyear}{2024-2025}
+\renewcommand{\internshipperiod}{January 20 - June 20, 2025}
+
+% ÉTAPE 3: Institution académique
+\renewcommand{\university}{University of Technology}
+\renewcommand{\department}{Computer Science Department}
+\renewcommand{\academicsupervisor}{Dr. Academic Supervisor}
+\renewcommand{\supervisorposition}{Professor in Software Engineering}
+
+% ÉTAPE 4: Entreprise d'accueil
+\renewcommand{\company}{Tech Innovation Corp}
+\renewcommand{\companydepartment}{Software Development Department}
+\renewcommand{\companytutor}{Jane Smith}
+\renewcommand{\tutorposition}{Senior Software Architect}
+
+% ÉTAPE 5: Informations complémentaires
+\renewcommand{\defensedate}{July 15, 2025}
+
+% Variables personnalisées supplémentaires (optionnel)
+\renewcommand{\projectname}{AgileFlow}
+\renewcommand{\maintech}{React.js}
+\renewcommand{\backendtech}{Node.js}
+\renewcommand{\databasetech}{MongoDB}
+
+
+% =====================================================
+% COMMANDES DE VÉRIFICATION (pour debug)
+% =====================================================
+
+% Commande pour tester que les variables sont bien définies
+\renewcommand{\testvariables}{%
+    \textbf{TEST DES VARIABLES :}\\[0.5cm]
+    \begin{tabular}{|l|l|}
+    \hline
+    Variable & Valeur \\
+    \hline
+    reporttitle & \reporttitle \\
+    \hline
+    reportauthor & \reportauthor \\
+    \hline
+    university & \university \\
+    \hline
+    company & \company \\
+    \hline
+    defensedate & \defensedate \\
+    \hline
+    \end{tabular}
+}

@@ -1,0 +1,161 @@
+% =====================================================
+% PAGE DE GARDE INTÉGRÉE - COMPATIBLE AVEC LE PROJET
+% =====================================================
+
+% Commandes personnalisées pour les encadrants
+\newcommand{\academicsupervisorinfo}[2]{%
+    \textbf{Academic Supervisor}\\[0.1cm]
+    \textcolor{primarycolor}{\textbf{#1}}\\[0.1cm]
+    \textcolor{graycolor}{\textit{#2}}\\[0.1cm]
+}
+
+\newcommand{\companysupervisorinfo}[2]{%
+    \textbf{Company Supervisor}\\[0.1cm]
+    \textcolor{primarycolor}{\textbf{#1}}\\[0.1cm]
+    \textcolor{graycolor}{\textit{#2}}\\[0.1cm]
+}
+
+\newcommand{\documentinfo}[1]{%
+    \textcolor{textcolor}{\textbf{Academic Year: #1}}\\[0.5cm]
+    \textcolor{graycolor}{\textit{Generated on \today}}
+}
+
+\begin{titlepage}
+    % Réduction temporaire des marges pour cette page uniquement
+    \newgeometry{top=1.27cm,bottom=1.27cm,left=1.27cm,right=1.27cm}
+    \thispagestyle{empty}
+
+    % Désactive l'interligne 1,5 pour la page de garde
+    {\singlespacing
+
+    % ===== BORDURE SIMPLE ET ÉLÉGANTE =====
+    \begin{tikzpicture}[remember picture,overlay]
+        % Variables pour faciliter les ajustements
+        \def\bordermarg{1cm}
+        \def\innerspace{0.3cm}
+        
+        % Bordure principale double
+        \draw[primarycolor, line width=2pt] 
+            ([xshift=\bordermarg,yshift=-\bordermarg]current page.north west) 
+            rectangle 
+            ([xshift=-\bordermarg,yshift=\bordermarg]current page.south east);
+        
+        \draw[primarycolor, line width=0.8pt] 
+            ([xshift=\bordermarg+\innerspace,yshift=-\bordermarg-\innerspace]current page.north west) 
+            rectangle 
+            ([xshift=-\bordermarg-\innerspace,yshift=\bordermarg+\innerspace]current page.south east);
+        
+        % Ornements des coins simplifiés
+        % Coin supérieur gauche
+        \draw[primarycolor, line width=1.5pt] 
+            ([xshift=\bordermarg,yshift=-\bordermarg]current page.north west) 
+            -- ++(1.2,0) -- ++(0,-0.4) -- ++(-0.4,0) -- ++(0,-1.2) -- ++(-0.8,0) -- cycle;
+        \draw[primarycolor, line width=1pt, rotate around={45:([xshift=\bordermarg+0.6cm,yshift=-\bordermarg-0.6cm]current page.north west)}] 
+            ([xshift=\bordermarg+0.6cm,yshift=-\bordermarg-0.6cm]current page.north west) rectangle ++(0.15,0.15);
+        
+        % Coin supérieur droit
+        \draw[primarycolor, line width=1.5pt] 
+            ([xshift=-\bordermarg,yshift=-\bordermarg]current page.north east) 
+            -- ++(-1.2,0) -- ++(0,-0.4) -- ++(0.4,0) -- ++(0,-1.2) -- ++(0.8,0) -- cycle;
+        \draw[primarycolor, line width=1pt, rotate around={45:([xshift=-\bordermarg-0.6cm,yshift=-\bordermarg-0.6cm]current page.north east)}] 
+            ([xshift=-\bordermarg-0.6cm,yshift=-\bordermarg-0.6cm]current page.north east) rectangle ++(0.15,0.15);
+        
+        % Coin inférieur gauche
+        \draw[primarycolor, line width=1.5pt] 
+            ([xshift=\bordermarg,yshift=\bordermarg]current page.south west) 
+            -- ++(1.2,0) -- ++(0,0.4) -- ++(-0.4,0) -- ++(0,1.2) -- ++(-0.8,0) -- cycle;
+        \draw[primarycolor, line width=1pt, rotate around={45:([xshift=\bordermarg+0.6cm,yshift=\bordermarg+0.6cm]current page.south west)}] 
+            ([xshift=\bordermarg+0.6cm,yshift=\bordermarg+0.6cm]current page.south west) rectangle ++(0.15,0.15);
+        
+        % Coin inférieur droit
+        \draw[primarycolor, line width=1.5pt] 
+            ([xshift=-\bordermarg,yshift=\bordermarg]current page.south east) 
+            -- ++(-1.2,0) -- ++(0,0.4) -- ++(0.4,0) -- ++(0,1.2) -- ++(0.8,0) -- cycle;
+        \draw[primarycolor, line width=1pt, rotate around={45:([xshift=-\bordermarg-0.6cm,yshift=\bordermarg+0.6cm]current page.south east)}] 
+            ([xshift=-\bordermarg-0.6cm,yshift=\bordermarg+0.6cm]current page.south east) rectangle ++(0.15,0.15);
+    \end{tikzpicture}
+
+    % Contenu centré avec espacement amélioré
+    \begin{center}
+        % Logos en haut avec espacement (optionnels - remplacez par vos logos)
+        % \vspace{0.5cm}
+        \begin{minipage}{0.35\textwidth}
+            \centering
+            \includegraphics[width=0.6\textwidth]{assets/logos/university-logo.png}
+            % {\Large \textcolor{primarycolor}{\textbf{[UNIVERSITY LOGO]}}}
+        \end{minipage}%
+        \hfill
+        \begin{minipage}{0.35\textwidth}
+            \centering
+            \includegraphics[width=0.6\textwidth]{assets/logos/company-logo.png}
+            % {\Large \textcolor{secondarycolor}{\textbf{[COMPANY LOGO]}}}
+        \end{minipage}
+
+        \vspace{1cm}
+
+        % Section académique
+        % {\large \textcolor{textcolor}{\textbf{\university}}}\\[0.3cm]
+        % {\large \textcolor{primarycolor}{\textbf{\department}}}\\[0.3cm]
+        % {\large \textcolor{graycolor}{\program}}\\[1cm]
+
+        % Type de document
+        {\huge \textcolor{textcolor}{\textbf{\reporttype}}}\\[0.75cm]
+        \textcolor{primarycolor}{\rule{0.8\linewidth}{0.5mm}}\\[0.5cm]
+
+        % Titre principal
+        {\normalsize
+        \begin{minipage}{0.85\linewidth}
+            \centering
+            {\LARGE \textbf{\textcolor{primarycolor}{\reporttitle{}}}}
+        \end{minipage}\\[0.5cm]
+        
+        % Sous-titre
+        \begin{minipage}{0.8\linewidth}
+            \centering
+            {\large \textcolor{secondarycolor}{\reportsubtitle}}
+        \end{minipage}\\[0.5cm]
+        
+        \textcolor{textcolor}{\rule{0.6\linewidth}{0.5mm}}\\[0.5cm]
+        }
+
+        % Contexte du projet
+        {\large \textcolor{textcolor}{Project conducted at \textcolor{primarycolor}{\company}}}\\[0.2cm]
+        {\large \textcolor{graycolor}{Internship Period: \internshipperiod}}\\[1cm]
+
+        % Auteur mis en emphase
+        {\large \textcolor{textcolor}{Prepared by}}\\[0.3cm]
+        {\large \textcolor{primarycolor}{\textbf{\reportauthor}}}\\[0.25cm]
+        {\large \textcolor{graycolor}{Student ID: \studentid}}\\[0.25cm]
+        {\large \textcolor{graycolor}{\program}}\\[1cm]
+    \end{center}
+
+    \vspace{1cm}
+
+    % Encadrants avec nouvelle mise en page centrée
+    \begin{center}
+        \begin{minipage}{0.42\textwidth}
+            \centering
+            \companysupervisorinfo{\companytutor}{\tutorposition}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.42\textwidth}
+            \centering
+            \academicsupervisorinfo{\academicsupervisor}{\supervisorposition}
+        \end{minipage}%
+    \end{center}
+
+    \vspace{1cm}
+
+    % Informations académiques centrées
+    \begin{center}
+        \documentinfo{\academicyear}\\[0.3cm]
+        {\large \textcolor{primarycolor}{\textbf{Defense Date: \defensedate}}}
+    \end{center}
+
+    \vspace{1cm}
+
+    } % Fin du bloc singlespacing
+
+    % Restauration des marges originales à la fin de la page
+    \restoregeometry
+\end{titlepage}

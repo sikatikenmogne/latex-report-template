@@ -1,0 +1,962 @@
+% =====================================================
+% TUTORIEL COMPLET - TEMPLATE RAPPORT DE STAGE
+% =====================================================
+
+\documentclass{internshipreport}
+
+% =====================================================
+% CONFIGURATION MÉTADONNÉES (ÉTAPE 1)
+% =====================================================
+
+% Configuration du rapport (À personnaliser)
+\reporttitle{Tutorial: Professional Report Template Features}
+\reportsubtitle{Complete Guide to LaTeX Template Customization}
+\reporttype{TUTORIAL REPORT}
+
+% Informations étudiant
+\reportauthor{John Doe Student}
+\studentid{ST2024001}
+\program{Computer Science Engineering}
+\academicyear{2024-2025}
+\internshipperiod{January 20 - June 20, 2025}
+
+% Institution académique
+\university{University of Technology}
+\department{Computer Science Department}
+\academicsupervisor{Dr. Academic Supervisor}
+\supervisorposition{Professor in Software Engineering}
+
+% Entreprise d'accueil
+\company{Tech Innovation Corp}
+\companydepartment{Software Development Department}
+\companytutor{Jane Smith}
+\tutorposition{Senior Software Architect}
+
+% Informations supplémentaires
+\defensedate{July 15, 2025}
+
+% =====================================================
+% CHARGEMENT DES MODULES DE CONFIGURATION
+% =====================================================
+
+% Chargement des configurations modulaires
+\input{config/packages}    % Packages additionnels
+\input{config/colors}      % Couleurs personnalisées
+\input{config/commands}    % Commandes personnalisées
+\input{config/style}       % Styles et mise en page
+\input{config/metadata}       % Styles et mise en page
+
+% Templates réutilisables
+\input{templates/boxes}    % Boîtes et encadrés
+\input{templates/figures}  % Templates de figures
+\input{templates/tables}   % Templates de tableaux
+
+% =====================================================
+% DÉBUT DU DOCUMENT
+% =====================================================
+
+\begin{document}
+
+% =====================================================
+% PAGE DE GARDE AUTOMATIQUE
+% =====================================================
+
+% \makereportpage
+
+\input{content/frontmatter/titlepage}
+
+
+% =====================================================
+% PAGES LIMINAIRES (FRONT MATTER)
+% =====================================================
+\newgeometry{top=1.75cm,bottom=1.75cm,left=2.54cm,right=2.54cm}
+
+\frontmatter
+
+% =====================================================
+% SOMMAIRES AUTOMATIQUES
+% =====================================================
+
+% % Table des matières
+% \tableofcontents
+% \newpage
+
+% % Liste des figures (générée automatiquement)
+% \listoffigures
+% \newpage
+
+% % Liste des tableaux (générée automatiquement)
+% \listoftables
+% \newpage
+
+% Table des matières
+\newpage
+\chapter*{Contents}
+\vspace*{-2cm} % Ajustez la valeur pour réduire l'espace si besoin
+\addcontentsline{toc}{chapter}{Contents}
+\begin{singlespace}
+\renewcommand{\contentsname}{}
+\vspace*{-1cm}
+\tableofcontents
+\end{singlespace}
+
+% Liste des tableaux
+\newpage
+\chapter*{List of Tables}
+\vspace*{-2cm} % Ajustez la valeur pour réduire l'espace si besoin
+\addcontentsline{toc}{chapter}{List of Tables}
+\begin{singlespace}
+\renewcommand{\listtablename}{}
+\vspace*{-1cm}
+\listoftables
+\end{singlespace}
+
+% Liste des figures
+\newpage
+\chapter*{List of Figures}
+\vspace*{-2cm} % Ajustez la valeur pour réduire l'espace si besoin
+\addcontentsline{toc}{chapter}{List of Figures}
+\begin{singlespace}
+\renewcommand{\listfigurename}{}
+\vspace*{-1cm} % Ajustez la valeur pour réduire l'espace si besoin
+\listoffigures
+\end{singlespace}
+
+
+% =====================================================
+% PAGES LIMINAIRES PERSONNALISÉES
+% =====================================================
+
+\chapter*{List of Abbreviations}
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{3cm}|p{10cm}|}
+\hline
+\tableheadercell{Abbreviation} & \tableheadercell{Definition} \\
+\hline
+API & Application Programming Interface \\
+\hline
+\alternaterow
+CRUD & Create, Read, Update, Delete \\
+\hline
+HTTP & HyperText Transfer Protocol \\
+\hline
+\alternaterow
+JSON & JavaScript Object Notation \\
+\hline
+REST & Representational State Transfer \\
+\hline
+\alternaterow
+SQL & Structured Query Language \\
+\hline
+UI/UX & User Interface/User Experience \\
+\hline
+\end{tabular}
+\caption{List of Technical Abbreviations}
+\end{table}
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+\section*{English Abstract}
+
+This tutorial document demonstrates the comprehensive features of the professional internship report LaTeX template. It showcases advanced typography, automated content generation, custom environments, and professional styling options.
+
+\begin{objectives}
+The tutorial objectives include:
+\begin{itemize}
+\item Demonstrating automatic table of contents generation
+\item Showcasing figure and table insertion methods
+\item Illustrating custom commands and environments
+\item Presenting typography and styling options
+\end{itemize}
+\end{objectives}
+
+\begin{results}
+Key features demonstrated:
+\begin{itemize}
+\item \metric{15+} custom environments and commands
+\item \metric{100\%} automated content indexing
+\item \metric{Professional} typography and layout
+\item \metric{Cross-platform} compatibility
+\end{itemize}
+\end{results}
+
+\textbf{Keywords:} LaTeX, template, tutorial, typography, automation, professional
+
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+
+I would like to thank the open-source LaTeX community for providing the tools and packages that make professional document creation possible. Special thanks to the developers of \technology{tcolorbox}, \technology{tikz}, and \technology{hyperref} packages.
+
+% =====================================================
+% CORPS PRINCIPAL (MAIN MATTER)
+% =====================================================
+
+\mainmatter
+
+\chapter{Introduction: Template Features Overview}
+\label{chap:introduction}
+
+\section{Welcome to the Professional Template}
+
+This tutorial demonstrates all features of the internship report template. Each section showcases different capabilities, from basic formatting to advanced automation features.
+
+\begin{infobox}[Template Philosophy]
+This template is designed with three core principles:
+\begin{itemize}
+\item \important{Modularity}: Separate configuration for easy customization
+\item \important{Automation}: Reduce manual work with smart automation
+\item \important{Professionalism}: Industry-standard appearance and typography
+\end{itemize}
+\end{infobox}
+
+\section{Document Structure}
+
+The template follows a hierarchical structure:
+
+\begin{enumerate}
+\item \textbf{Configuration Layer}: Modular settings in \filename{config/} directory
+\item \textbf{Content Layer}: Structured content in \filename{content/} directory
+\item \textbf{Template Layer}: Reusable components in \filename{templates/} directory
+\item \textbf{Asset Layer}: Images and resources in \filename{assets/} directory
+\end{enumerate}
+
+\chapter{Typography and Text Formatting}
+\label{chap:typography}
+
+\section{Font Configuration}
+
+The template uses \important{Times New Roman} as the primary font family, providing a professional appearance suitable for academic and corporate documents.
+
+\subsection{Text Emphasis Commands}
+
+Demonstrate various text emphasis options:
+
+\begin{itemize}
+\item \textbf{Bold text} for emphasis
+\item \textit{Italic text} for concepts
+\item \texttt{Monospace text} for code
+\item \important{Important text} in brand color
+\item \highlight{Highlighted text} for key points
+\item \concept{Conceptual text} for definitions
+\end{itemize}
+
+\subsection{Specialized Text Commands}
+
+Technical and domain-specific commands:
+
+\begin{itemize}
+\item Company: \companyref{Tech Innovation Corp}
+\item Technology: \technology{React.js}, \technology{Node.js}
+\item Programming: \programming{JavaScript}, \programming{Python}
+\item Framework: \framework{Spring Boot}, \framework{Angular}
+\item Database: \database{PostgreSQL}, \database{MongoDB}
+\item Metrics: \metric{95\% uptime}, \improvement{40\% faster}
+\end{itemize}
+
+\section{Lists and Enumerations}
+
+\subsection{Bullet Points}
+
+Professional bullet point styling:
+
+\begin{itemize}
+\item First level items use colored bullets
+\item Second level items:
+    \begin{itemize}
+    \item Use different styling
+    \item Maintain visual hierarchy
+    \item Support deep nesting
+    \end{itemize}
+\item Third level and beyond maintain consistency
+\end{itemize}
+
+\subsection{Numbered Lists}
+
+Automatic numbering with professional spacing:
+
+\begin{enumerate}
+\item Requirements analysis and documentation
+\item System design and architecture planning
+\item Implementation and development phase
+\item Testing and quality assurance
+\item Deployment and maintenance
+\end{enumerate}
+
+\section{Paragraph Spacing and Line Height}
+
+The template uses \texttt{onehalfspacing} (1.5x line height) for optimal readability. Paragraph spacing is set to \texttt{6pt} to create clean separation between paragraphs while maintaining flow.
+
+\chapter{Custom Environments and Boxes}
+\label{chap:environments}
+
+\section{Information Boxes}
+
+Various types of information boxes for different purposes:
+
+\begin{infobox}[Key Information]
+This is an information box used to highlight important details that readers should notice.
+\end{infobox}
+
+\begin{warningbox}
+Warning boxes draw attention to potential issues or important considerations.
+\end{warningbox}
+
+\begin{successbox}
+Success boxes highlight positive outcomes, achievements, or completed milestones.
+\end{successbox}
+
+\begin{technicalbox}
+Technical boxes provide detailed technical information, specifications, or implementation details.
+\end{technicalbox}
+
+\section{Academic Environments}
+
+\begin{definition}{Microservices Architecture}
+A software development technique that structures an application as a collection of loosely coupled services, which implement business capabilities.
+\end{definition}
+
+\begin{objectives}
+Project objectives for this tutorial:
+\begin{itemize}
+\item Demonstrate all template features
+\item Provide practical examples
+\item Show best practices
+\item Enable quick adoption
+\end{itemize}
+\end{objectives}
+
+\begin{results}
+Tutorial outcomes:
+\begin{itemize}
+\item \metric{100\%} feature coverage
+\item \improvement{Reduced learning time}
+\item \highlight{Professional output quality}
+\end{itemize}
+\end{results}
+
+\begin{keyfindings}
+Key insights from template development:
+\begin{itemize}
+\item Modular architecture improves maintainability
+\item Automation reduces manual errors
+\item Professional styling enhances credibility
+\end{itemize}
+\end{keyfindings}
+
+\section{Project Management Environments}
+
+\begin{methodology}
+The template development followed \methodology{Agile} principles with iterative improvements and user feedback integration.
+\end{methodology}
+
+User story example:
+\userstory{template user}{to quickly generate professional reports}{I can focus on content rather than formatting}
+
+\chapter{Tables and Data Presentation}
+\label{chap:tables}
+
+\section{Basic Table Formatting}
+
+Simple table with alternating row colors:
+
+\begin{table}[H]
+\centering
+\caption{Basic Table Example with Professional Styling}
+\label{tab:basic-example}
+\begin{tabular}{|p{4cm}|p{6cm}|p{3cm}|}
+\hline
+\tableheadercell{Feature} & \tableheadercell{Description} & \tableheadercell{Status} \\
+\hline
+Automated TOC & Generates table of contents automatically & \important{Active} \\
+\hline
+\alternaterow
+Custom Colors & Professional color scheme & \important{Active} \\
+\hline
+Responsive Layout & Adapts to different page sizes & \important{Active} \\
+\hline
+\alternaterow
+Cross-references & Automatic figure and table numbering & \important{Active} \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Performance Metrics Table}
+
+Specialized table for showing performance improvements:
+
+\begin{table}[H]
+\centering
+\caption{Performance Improvement Metrics}
+\label{tab:performance-metrics}
+\begin{tabular}{|p{5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+\tableheadercell{Metric} & \tableheadercell{Before} & \tableheadercell{After} & \tableheadercell{Improvement} \\
+\hline
+Page Load Time & 3.2s & 1.8s & \improvement{44\%} \\
+\hline
+\alternaterow
+Memory Usage & 512MB & 320MB & \improvement{38\%} \\
+\hline
+Error Rate & 2.1\% & 0.3\% & \improvement{86\%} \\
+\hline
+\alternaterow
+User Satisfaction & 72\% & 94\% & \improvement{31\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Complex Data Table}
+
+Table with multiple data types and formatting:
+
+\begin{table}[H]
+\centering
+\caption{Technology Stack Comparison}
+\label{tab:tech-stack}
+\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{4cm}|}
+\hline
+\tableheadercell{Category} & \tableheadercell{Technology} & \tableheadercell{Version} & \tableheadercell{Use Case} \\
+\hline
+Frontend & \framework{React} & 18.2.0 & User interface development \\
+\hline
+\alternaterow
+Backend & \framework{Node.js} & 18.17.0 & Server-side logic \\
+\hline
+Database & \database{PostgreSQL} & 15.3 & Data persistence \\
+\hline
+\alternaterow
+Cache & \database{Redis} & 7.0.11 & Session management \\
+\hline
+Deployment & \technology{Docker} & 24.0.2 & Containerization \\
+\hline
+\end{tabular}
+\end{table}
+
+\chapter{Figures and Image Management}
+\label{chap:figures}
+
+\section{Standard Figure Insertion}
+
+Basic figure with caption and cross-reference:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{assets/images/examples/architecture-diagram.png}
+\caption{System Architecture Overview - demonstrates automatic figure numbering}
+\label{fig:architecture}
+\end{figure}
+
+Reference to the figure: As shown in \figref{architecture}, the system follows a microservices architecture pattern.
+
+\section{Multiple Figure Layouts}
+
+\subsection{Side-by-side Figures}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.45\textwidth}
+\includegraphics[width=\textwidth]{assets/images/examples/before-optimization.png}
+\caption{Before optimization}
+\label{fig:before}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.45\textwidth}
+\includegraphics[width=\textwidth]{assets/images/examples/after-optimization.png}
+\caption{After optimization}
+\label{fig:after}
+\end{subfigure}
+\caption{Performance Comparison: Before and After Optimization}
+\label{fig:comparison}
+\end{figure}
+
+\subsection{Wrapped Figure with Text}
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+\centering
+\includegraphics[width=0.38\textwidth]{assets/images/examples/mobile-interface.png}
+\caption{Mobile interface}
+\label{fig:mobile}
+\end{wrapfigure}
+
+This text wraps around the figure, demonstrating how to integrate images with flowing text content. The mobile interface shown provides an intuitive user experience optimized for touch interactions.
+
+The responsive design ensures optimal display across different screen sizes and orientations. Key features include simplified navigation, touch-friendly buttons, and streamlined information hierarchy.
+
+\section{Technical Diagrams}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{assets/images/diagrams/database-schema.png}
+\caption{Database Schema Design with Entity Relationships}
+\label{fig:database-schema}
+\end{figure}
+
+\section{Charts and Graphs}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{assets/images/charts/performance-trends.png}
+\caption{Performance Trends Over Time - showing system improvements}
+\label{fig:performance-trends}
+\end{figure}
+
+\chapter{Code Listings and Technical Content}
+\label{chap:code}
+
+\section{Code Formatting}
+
+\subsection{Inline Code}
+
+Use \programming{console.log()} for debugging or \tech{npm install} for package installation.
+
+\subsection{Code Blocks}
+
+\begin{lstlisting}[language=JavaScript, caption=React Component Example]
+import React, { useState, useEffect } from 'react';
+
+const UserDashboard = ({ userId }) => {
+    const [userData, setUserData] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetchUserData(userId)
+            .then(data => {
+                setUserData(data);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching user data:', error);
+                setLoading(false);
+            });
+    }, [userId]);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    return (
+        <div className="dashboard">
+            <h1>Welcome, {userData.name}</h1>
+            <div className="stats">
+                <p>Projects: {userData.projectCount}</p>
+                <p>Last Login: {userData.lastLogin}</p>
+            </div>
+        </div>
+    );
+};
+
+export default UserDashboard;
+\end{lstlisting}
+
+\subsection{Multiple Language Examples}
+
+Python example:
+
+\begin{lstlisting}[language=Python, caption=Data Processing Script]
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+
+def process_data(file_path):
+    """
+    Process raw data and prepare for machine learning
+    """
+    # Load and clean data
+    df = pd.read_csv(file_path)
+    df = df.dropna()
+    
+    # Feature engineering
+    df['feature_ratio'] = df['feature_a'] / df['feature_b']
+    df['log_transform'] = np.log1p(df['target_variable'])
+    
+    # Split data
+    X = df.drop('target_variable', axis=1)
+    y = df['target_variable']
+    
+    return train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Usage
+X_train, X_test, y_train, y_test = process_data('data.csv')
+print(f"Training set size: {len(X_train)}")
+print(f"Test set size: {len(X_test)}")
+\end{lstlisting}
+
+SQL example:
+
+\begin{lstlisting}[language=SQL, caption=Database Query Optimization]
+-- Optimized query with proper indexing
+SELECT 
+    u.user_id,
+    u.username,
+    COUNT(p.project_id) as project_count,
+    AVG(p.completion_rate) as avg_completion
+FROM users u
+LEFT JOIN projects p ON u.user_id = p.owner_id
+WHERE u.status = 'active'
+    AND u.created_date >= DATE_SUB(NOW(), INTERVAL 1 YEAR)
+GROUP BY u.user_id, u.username
+HAVING project_count > 0
+ORDER BY avg_completion DESC
+LIMIT 100;
+
+-- Index recommendations for performance
+CREATE INDEX idx_users_status_date ON users(status, created_date);
+CREATE INDEX idx_projects_owner ON projects(owner_id);
+\end{lstlisting}
+
+\section{Code Explanation Boxes}
+
+\begin{codeexplanation}
+The React component above demonstrates:
+\begin{itemize}
+\item \important{State Management}: Using \programming{useState} for component state
+\item \important{Side Effects}: Managing API calls with \programming{useEffect}
+\item \important{Error Handling}: Proper error catching and user feedback
+\item \important{Conditional Rendering}: Loading states and data display
+\end{itemize}
+\end{codeexplanation}
+
+\chapter{Cross-References and Navigation}
+\label{chap:references}
+
+\section{Automatic Numbering}
+
+The template automatically numbers and cross-references all elements:
+
+\begin{itemize}
+\item Chapters: \chapref{introduction}, \chapref{typography}, \chapref{environments}
+\item Sections: \secref{font-configuration}, \secref{lists-and-enumerations}
+\item Figures: \figref{architecture}, \figref{comparison}, \figref{mobile}
+\item Tables: \tabref{basic-example}, \tabref{performance-metrics}, \tabref{tech-stack}
+\item Code listings: Listing~\ref{code:react-component}, Listing~\ref{code:python-script}
+\end{itemize}
+
+\section{Hyperlink Navigation}
+
+All cross-references are clickable hyperlinks in the PDF, providing easy navigation throughout the document. The template automatically handles:
+
+\begin{itemize}
+\item \important{Internal Links}: All \textbackslash ref commands become clickable
+\item \important{Table of Contents}: Clickable entries to jump to sections
+\item \important{List of Figures/Tables}: Direct navigation to figures and tables
+\item \important{Bibliography}: Linked citations (when bibliography is used)
+\end{itemize}
+
+\chapter{Advanced Features and Customization}
+\label{chap:advanced}
+
+\section{Color Scheme Customization}
+
+The template uses a professional color scheme that can be easily customized in \filename{config/colors.tex}:
+
+\begin{technicalbox}[Color Variables]
+Primary colors:
+\begin{itemize}
+\item \textcolor{brandprimary}{\textbf{brandprimary}}: Main accent color (RGB: 220,80,80)
+\item \textcolor{brandsecondary}{\textbf{brandsecondary}}: Secondary color (RGB: 0,82,147)
+\item \textcolor{brandaccent}{\textbf{brandaccent}}: Accent color (RGB: 0,130,62)
+\end{itemize}
+\end{technicalbox}
+
+\section{Typography Configuration}
+
+Font and spacing settings can be modified in \filename{config/style.tex}:
+
+\begin{itemize}
+\item \textbf{Font Family}: Times New Roman (professional standard)
+\item \textbf{Line Spacing}: 1.5x (\texttt{onehalfspacing})
+\item \textbf{Paragraph Spacing}: 6pt with hanging indent
+\item \textbf{Section Spacing}: Optimized for readability
+\end{itemize}
+
+\section{Template Structure}
+
+\begin{bestpractice}
+For optimal results when using this template:
+\begin{enumerate}
+\item Keep metadata in \filename{config/metadata.tex}
+\item Store content in structured \filename{content/} directories
+\item Place reusable elements in \filename{templates/}
+\item Organize assets in \filename{assets/} with subdirectories
+\item Use provided commands for consistency
+\end{enumerate}
+\end{bestpractice}
+
+\section{Compilation Options}
+
+The template supports multiple compilation methods:
+
+\begin{table}[H]
+\centering
+\caption{Compilation Methods and Use Cases}
+\label{tab:compilation-methods}
+\begin{tabular}{|p{4cm}|p{5cm}|p{4cm}|}
+\hline
+\tableheadercell{Method} & \tableheadercell{Description} & \tableheadercell{Best For} \\
+\hline
+Full Compilation & Complete build with bibliography & Final documents \\
+\hline
+\alternaterow
+Quick Compilation & Single pass compilation & Draft writing \\
+\hline
+Watch Mode & Automatic compilation on save & Active development \\
+\hline
+\alternaterow
+Clean Build & Fresh compilation from scratch & Troubleshooting \\
+\hline
+\end{tabular}
+\end{table}
+
+\chapter{Best Practices and Tips}
+\label{chap:best-practices}
+
+\section{Content Organization}
+
+\begin{objectives}
+Follow these organizational principles:
+\begin{itemize}
+\item \important{One chapter per file}: Easier version control and collaboration
+\item \important{Logical file naming}: Use descriptive, consistent names
+\item \important{Asset organization}: Group related images in subdirectories
+\item \important{Version control}: Track changes with Git or similar systems
+\end{itemize}
+\end{objectives}
+
+\section{Writing Guidelines}
+
+\subsection{Professional Writing Style}
+
+\begin{itemize}
+\item Use \important{active voice} whenever possible
+\item Write \important{clear, concise sentences}
+\item Maintain \important{consistent terminology}
+\item Include \important{specific metrics} and quantified results
+\end{itemize}
+
+\subsection{Technical Documentation}
+
+\begin{lessonslearned}
+Key lessons for technical writing:
+\begin{itemize}
+\item \important{Explain before showing}: Provide context before code examples
+\item \important{Use visual aids}: Diagrams clarify complex concepts
+\item \important{Include examples}: Real-world examples aid understanding
+\item \important{Maintain consistency}: Use the same terms throughout
+\end{itemize}
+\end{lessonslearned}
+
+\section{Quality Assurance}
+
+\subsection{Content Review Checklist}
+
+\begin{enumerate}
+\item \textbf{Spelling and Grammar}: Use spell-check and proof-reading
+\item \textbf{Cross-references}: Verify all \textbackslash ref commands work
+\item \textbf{Figure Quality}: Ensure images are high-resolution
+\item \textbf{Table Formatting}: Check alignment and readability
+\item \textbf{Code Accuracy}: Test all code examples
+\item \textbf{Consistent Style}: Follow template conventions
+\end{enumerate}
+
+\subsection{Final Compilation Check}
+
+Before submission, perform these checks:
+
+\begin{warningbox}
+Critical final checks:
+\begin{itemize}
+\item Compile successfully without errors
+\item All figures display correctly
+\item Table of contents is accurate
+\item Page numbers are sequential
+\item Bibliography is properly formatted
+\item PDF bookmarks work correctly
+\end{itemize}
+\end{warningbox}
+
+% =====================================================
+% CONCLUSION
+% =====================================================
+
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+
+This tutorial has demonstrated the comprehensive features of the professional internship report template. The modular architecture, automated content generation, and professional styling provide a robust foundation for creating high-quality academic and professional documents.\cite{cohn2009succeeding}
+
+\begin{keyfindings}
+Tutorial outcomes:
+\begin{itemize}
+\item \metric{Complete coverage} of all template features
+\item \improvement{Practical examples} for immediate implementation
+\item \highlight{Professional standards} for document quality
+\item \important{Automation benefits} for efficiency
+\end{itemize}
+\end{keyfindings}
+
+The template's design philosophy of modularity, automation, and professionalism ensures that users can focus on content creation while maintaining consistent, high-quality output.
+
+% =====================================================
+% ANNEXES
+% =====================================================
+
+\appendix
+
+\chapter{Template File Structure}
+\label{app:file-structure}
+
+Complete directory structure of the template:
+
+\begin{lstlisting}[language=bash, caption=Template Directory Structure]
+internship-report-template/
+|-- .vscode/                    # VS Code configuration
+|   |-- extensions.json
+|   |-- settings.json
+|   \-- tasks.json
+|-- assets/                     # Project assets
+|   |-- fonts/                 # Custom fonts
+|   |-- images/                # Image files
+|   |   |-- architecture/      # Architecture diagrams
+|   |   |-- charts/           # Charts and graphs
+|   |   |-- diagrams/         # Technical diagrams
+|   |   |-- screenshots/      # Application screenshots
+|   |   \-- examples/         # Tutorial examples
+|   \-- logos/                # Company/institution logos
+|-- build/                     # Compilation output
+|-- config/                    # Modular configuration
+|   |-- colors.tex            # Color definitions
+|   |-- commands.tex          # Custom commands
+|   |-- metadata.tex          # Document metadata
+|   |-- packages.tex          # LaTeX packages
+|   \-- style.tex             # Typography and layout
+|-- content/                   # Document content
+|   |-- frontmatter/          # Front matter pages
+|   |-- chapters/             # Main chapters
+|   \-- backmatter/           # Conclusion and appendices
+|-- diagrams/                 # Diagram source files
+|-- scripts/                  # Build scripts
+|   |-- compile.bat           # Windows compilation
+|   |-- compile.sh            # Unix/Mac compilation
+|   |-- clean.bat             # Windows cleanup
+|   \-- clean.sh              # Unix/Mac cleanup
+|-- templates/                # Reusable templates
+|   |-- boxes.tex             # Custom environments
+|   |-- figures.tex           # Figure templates
+|   \-- tables.tex            # Table templates
+|-- internshipreport.cls      # LaTeX class file
+|-- main.tex                  # Main document
+|-- README.md                 # Documentation
+\-- .gitignore               # Git ignore rules
+\end{lstlisting}
+
+\chapter{Custom Commands Reference}
+\label{app:commands}
+
+\section{Text Formatting Commands}
+
+\begin{table}[H]
+\centering
+\caption{Text Formatting Commands Reference}
+\begin{tabular}{|p{5cm}|p{5cm}|p{3cm}|}
+\hline
+\tableheadercell{Command} & \tableheadercell{Description} & \tableheadercell{Example} \\
+\hline
+\texttt{\textbackslash important\{text\}} & Important emphasis & \important{Important} \\
+\hline
+\alternaterow
+\texttt{\textbackslash highlight\{text\}} & Highlight text & \highlight{Highlighted} \\
+\hline
+\texttt{\textbackslash concept\{text\}} & Conceptual term & \concept{Concept} \\
+\hline
+\alternaterow
+\texttt{\textbackslash keyword\{text\}} & Keyword emphasis & \keyword{Keyword} \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Technical Commands}
+
+\begin{table}[H]
+\centering
+\caption{Technical Commands Reference}
+\begin{tabular}{|p{5cm}|p{5cm}|p{3cm}|}
+\hline
+\tableheadercell{Command} & \tableheadercell{Description} & \tableheadercell{Example} \\
+\hline
+\texttt{\textbackslash technology\{name\}} & Technology reference & \technology{React} \\
+\hline
+\alternaterow
+\texttt{\textbackslash programming\{lang\}} & Programming language & \programming{Python} \\
+\hline
+\texttt{\textbackslash framework\{name\}} & Framework reference & \framework{Django} \\
+\hline
+\alternaterow
+\texttt{\textbackslash database\{name\}} & Database reference & \database{PostgreSQL} \\
+\hline
+\texttt{\textbackslash companyref\{name\}} & Company reference & \companyref{Microsoft} \\
+\hline
+\end{tabular}
+\end{table}
+
+\chapter{Environment Usage Guide}
+\label{app:environments}
+
+\section{Information Environments}
+
+Demonstration of all available box environments:
+
+\begin{infobox}[Information Box]
+Use for general information that enhances understanding.
+\end{infobox}
+
+\begin{warningbox}
+Use for warnings, cautions, or important considerations.
+\end{warningbox}
+
+\begin{successbox}
+Use for positive outcomes, achievements, or successful implementations.
+\end{successbox}
+
+\begin{technicalbox}
+Use for detailed technical information, specifications, or implementation details.
+\end{technicalbox}
+
+\begin{bestpractice}
+Use for recommended practices, guidelines, or proven methods.
+\end{bestpractice}
+
+\begin{lessonslearned}
+Use for insights gained from experience, retrospectives, or project conclusions.
+\end{lessonslearned}
+
+\section{Academic Environments}
+
+\begin{definition}{Template}
+A pre-designed document format that provides structure and styling for consistent document creation.
+\end{definition}
+
+\begin{objectives}
+Use for listing project objectives, goals, or intended outcomes.
+\end{objectives}
+
+\begin{results}
+Use for presenting quantified results, metrics, or achievements.
+\end{results}
+
+\begin{keyfindings}
+Use for summarizing important discoveries or conclusions.
+\end{keyfindings}
+
+\begin{methodology}
+Use for describing approaches, methods, or procedures followed.
+\end{methodology}
+
+\chapter*{Bibliographie}
+\nocite{*}
+\addcontentsline{toc}{chapter}{Bibliographie}
+\printbibliography[heading=none]
+
+\end{document}

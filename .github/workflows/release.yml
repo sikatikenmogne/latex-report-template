@@ -1,0 +1,33 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - '*'  # Tous les tags, pas seulement semver
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build and Release
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          latexmk_use_xelatex: false
+          args: -pdf -interaction=nonstopmode
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: main.pdf
+          generate_release_notes: true
+          draft: false
+          prerelease: false
