@@ -108,16 +108,20 @@ This template leverages modern LaTeX packages and tools for optimal document pro
 
 ## 📋 Prerequisites
 
+**For Online Use:**
+- [Overleaf](https://overleaf.com) account (free)
+
 **For Local Use:**
 - LaTeX Distribution (TeX Live 2023+ or MiKTeX)
 - Python 3.8+
+- GNU Make 4.4+
 - Git
 
 ## 🚀 Quick Start
 
 ### Option 1: Use Online (Easiest)
 
-1. **Download** this repository as ZIP
+1. **Download** this repository as [ZIP](https://github.com/sikatikenmogne/latex-report-template/archive/refs/heads/main.zip)
 2. **Upload to [Overleaf](https://overleaf.com)**
 3. **Set compiler** to `pdfLaTeX`
 4. **Edit `metadata.tex`** with your information
@@ -139,9 +143,6 @@ python scripts/compile.py
 # Watch for changes (auto-compile)
 python scripts/watch.py
 ```
-
-**For Online Use:**
-- [Overleaf](https://overleaf.com) account (free)
 
 ## 🔧 Commands
 
@@ -261,7 +262,7 @@ Contributions welcome! Please follow our guidelines for the best experience.
 
 ## 📄 License
 
-This project is licensed under the **MIT License** - see [LICENSE](LICENSE) for details.
+This project is licensed under the **MIT License** - see [LICENSE](LICENSE.md) for details.
 
 **TL;DR:** Free to use, modify, and distribute for any purpose.
 
