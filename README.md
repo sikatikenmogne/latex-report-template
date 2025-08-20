@@ -2,7 +2,7 @@
 
 # Professional LaTeX Report Template
 
-![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge) ![LaTeX](https://img.shields.io/badge/LaTeX-Professional-blue?style=for-the-badge&logo=latex) ![Version](https://img.shields.io/badge/Version-2.0-orange?style=for-the-badge) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge) ![Maintenance](https://img.shields.io/badge/Maintained-Yes-green.svg?style=for-the-badge) ![Overleaf](https://img.shields.io/badge/Overleaf-Compatible-47A141?style=for-the-badge&logo=overleaf&logoColor=white)
+![LaTeX](https://img.shields.io/badge/LaTeX-Professional-blue?style=for-the-badge&logo=latex) ![Version](https://img.shields.io/badge/Version-1.0-orange?style=for-the-badge) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge) ![Maintenance](https://img.shields.io/badge/Maintained-Yes-green.svg?style=for-the-badge) ![Overleaf](https://img.shields.io/badge/Overleaf-Compatible-47A141?style=for-the-badge&logo=overleaf&logoColor=white)
 
 **Professional, modular LaTeX template** for internship reports, thesis, and academic documents.  
 Modern typography • Automated compilation • Cross-platform compatibility
@@ -28,45 +28,14 @@ See Sample tutorial document based on this template [here](build/main.pdf).
 
 <details open>
 <summary><strong>Template Screenshots</strong></summary>
+<br/>
 
-<table>
-<tr>
-    <th></th>
-    <th></th>
-</tr>
-<tr>
-    <td>
-    <strong>Title Page</strong>
-    </td>
-    <td>
-    <strong>Chapter Layout</strong>
-    </td>
-</tr>
-<tr>
-    <td>
-    <img src="assets/images/examples/title-page.png"/>
-    </td>
-    <td>
-    <img src="assets/images/examples/chapter-layout.png"/>
-    </td>
-</tr>
-<tr>
-    <td>
-        <strong>Tables and Figures</strong>
-    </td>
-    <td>
-        <strong>Bibliography</strong>
-    </td>
-</tr>
-<tr>
-    <td>
-        <img src="assets/images/examples/tables-figures.png"/>
-    </td>
-    <td>
-        <img src="assets/images/examples/bibliography.png"/>
-    </td>
-</tr>
-</table>
+| **Title Page** | **Chapter Layout** |
+|:---:|:---:|
+| [![Title Page](assets/images/examples/title-page.png)](assets/images/examples/title-page.png)  | [![Chapter Layout](assets/images/examples/chapter-layout.png)](assets/images/examples/chapter-layout.png) |
+| **Tables and Figures** | **Bibliography** |
+| [![Tables and Figures](assets/images/examples/tables-figures.png)](assets/images/examples/tables-figures.png)  | [![Bibliography](assets/images/examples/bibliography.png)](assets/images/examples/bibliography.png) |
+
 
 </details>
 
@@ -75,7 +44,7 @@ See Sample tutorial document based on this template [here](build/main.pdf).
 This template leverages modern LaTeX packages and tools for optimal document production:
 
 <details>
-<summary><strong>↕️ Expand for more!</strong></summary>
+<summary><strong>↕️ Click here to Show/Hide Tech Stack</strong></summary>
 <br/>
 
 <div align="center">
